@@ -29,6 +29,7 @@ This is where OneScreenplay keeps you in your creative flow:
 Tab to cycle — Press Tab to rotate through element types in logical order: Scene → Action → Character → Dialogue → Transition. The top toolbar highlights the current type in real time.
 Enter for smart breaks — Press Enter and the app automatically creates the next logical element. After a Character? It creates a Dialogue block. After Dialogue? Another Character. After a Scene Heading? An Action block. You never break your writing rhythm to reach for a dropdown.
 Click to switch — The element type indicator in the toolbar is also clickable, letting you jump directly to any element type.
+
 🎭 Character Recognition & Analytics
 This is OneScreenplay's standout feature — and something most screenwriting tools completely ignore.
 
@@ -57,9 +58,7 @@ When your script is ready, export it to:
 🌐 HTML — For web sharing, digital reading, or further styling
 💾 Auto-Save & Project Management
 Auto-save at configurable intervals (1, 3, 5, 10, or 15 minutes) — never lose your work
-Project files use the .spm format (JSON-based) — lightweight, human-readable, and easy to back up or version-control
-Full file operations: New, Open, Save, Save As — with keyboard shortcuts for every action
-Unsaved changes warning — the app alerts you before closing with unsaved work
+
 ⌨️ Keyboard Shortcuts
 Shortcut	Action
 Tab	Cycle element type
@@ -77,24 +76,13 @@ Built with: Native HTML/CSS/JavaScript, jsPDF for PDF export
 File format: .spm (JSON-based project files)
 Project File Format
 
-JSON
-{
-  "title": "My Screenplay",
-  "author": "Your Name",
-  "content": "<editor HTML content>",
-  "scenes": ["INT. COFFEE SHOP - DAY", "EXT. PARK - EVENING"],
-  "metadata": {
-    "created": "2025-01-01T00:00:00.000Z",
-    "modified": "2025-01-15T12:30:00.000Z",
-    "version": "1.0"
-  }
-}
 🎯 Who Is This For?
 Film students who need Hollywood-standard formatting without the $200 price tag
 Indie screenwriters who want professional output at an indie budget
 Freelance writers who are tired of paying monthly for tools they use intermittently
 Script consultants who need quick character analytics to identify structural issues
 Anyone who believes creative tools should be accessible, not subscription-locked
+
 💰 Pricing Comparison
 Tool	Price	Model
 OneScreenplay	~$9.40	One-time purchase
