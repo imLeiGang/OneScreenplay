@@ -1,55 +1,114 @@
-写剧本 (OneScreenplay)
-专业剧本创作软件，采用标准剧本格式，支持场景、动作、角色、对话、转场五种核心元素，提供智能编辑与多格式导出功能。
+OneScreenplay — Professional Screenplay Writing, Without the Subscription
+Write industry-standard screenplays with intelligent character analytics — for a one-time price of ~$9.40.
 
-功能特性
-剧本编辑
-五种剧本元素：场景、动作、角色、对话、转场，符合专业剧本写作规范
-Tab 切换元素类型：按 Tab 键在 场景 → 动作 → 角色 → 对话 → 转场 之间循环切换，顶部导航栏实时高亮当前元素
-智能换行：按 Enter 键自动创建下一个逻辑元素，如角色后自动创建对话，对话后自动创建角色
-元素类型点击切换：点击顶部元素类型指示器可直接切换当前元素类型
-A4 分页预览：编辑器模拟 A4 纸张，内容超出时自动分页
+The Problem
+Screenwriting software hasn't changed much in decades — and neither has its pricing. Final Draft still charges $199+ upfront. Celtx pushes you into a monthly SaaS plan. Other "free" alternatives? They either don't respect Hollywood formatting standards, or they nickel-and-dime you with premium tiers for basic features like export and analytics.
 
-场景导航
-左侧面板自动生成场景列表，点击即可跳转到对应场景
-支持剧本标题和作者信息编辑
+For indie filmmakers, film students, and freelance screenwriters, this creates a frustrating reality: the tools you need to do professional work are priced as if you're already working on a studio budget.
 
-文件管理
-新建剧本（Ctrl+N）
-打开工程（Ctrl+O），支持 .spm 和 .json 格式
-保存（Ctrl+S）/ 另存为（Ctrl+Shift+S），工程文件格式为 .spm（基于 JSON）
-自动保存：可配置 1/3/5/10/15 分钟间隔，数据存储在 localStorage
+And even when you do pay, most screenwriting apps treat your script as plain text. They don't tell you that your protagonist disappears for 30 pages. They don't warn you that one character has 200 lines while another has 3. They format — but they don't analyze.
 
-多格式导出
-PDF 导出：基于 jsPDF 生成 A4 格式 PDF
-Word 导出：生成 Word 兼容的 HTML 文档（.doc）
-HTML 导出：生成标准 HTML 文档，含完整排版样式
+The Solution
+OneScreenplay is a dedicated screenplay editor that does both: it formats your script to professional Hollywood standards and gives you real-time character analytics to help you write better, more balanced stories — all for a one-time purchase of ~$9.40. No subscription. No in-app purchases. No premium unlock.
 
-状态栏
-实时显示当前元素类型、字数统计（中文字符 + 英文单词）、页数
-保存状态与自动保存状态提示
+🎬 Key Features
+Industry-Standard Hollywood Formatting
+OneScreenplay is built around the five core screenplay elements defined by professional formatting conventions:
 
-快捷键
-快捷键	功能
-Tab	切换元素类型
-Enter	智能换行（创建下一个逻辑元素）
-Ctrl+S	保存
-Ctrl+Shift+S	另存为
-Ctrl+N	新建剧本
-Ctrl+O	打开工程
+Element	Style	Example
+Scene Heading	Bold, uppercase, underline separator	INT. COFFEE SHOP - DAY
+Action	Justified, full-width	The morning light filters through...
+Character	Bold, centered, uppercase	LI MING
+Dialogue	Indented 20% each side, justified	(picks up the cup) Best coffee in town.
+Transition	Right-aligned, italic, uppercase	CUT TO:
+Every element is automatically styled the moment you create it. No manual formatting. No guessing. Your script looks professional from the first keystroke.
 
-使用方式
-浏览器直接运行
-用浏览器打开 jusuo-advanced.html 即可使用。浏览器环境下文件操作通过 File System Access API 和 localStorage 实现。
+Intelligent Element Switching
+This is where OneScreenplay keeps you in your creative flow:
 
-Electron 桌面应用
-项目兼容 Electron 环境，在 Electron 中运行时可使用原生文件对话框和 IPC 通信进行文件读写，提供更完整的桌面应用体验。
+Tab to cycle — Press Tab to rotate through element types in logical order: Scene → Action → Character → Dialogue → Transition. The top toolbar highlights the current type in real time.
+Enter for smart breaks — Press Enter and the app automatically creates the next logical element. After a Character? It creates a Dialogue block. After Dialogue? Another Character. After a Scene Heading? An Action block. You never break your writing rhythm to reach for a dropdown.
+Click to switch — The element type indicator in the toolbar is also clickable, letting you jump directly to any element type.
+🎭 Character Recognition & Analytics
+This is OneScreenplay's standout feature — and something most screenwriting tools completely ignore.
 
-剧本元素格式说明
-元素类型	说明	排版样式
-场景	场景标题，如"内景. 咖啡厅 - 白天"	加粗、大写、底部边框
-动作	场景描述与动作描写	两端对齐
-角色	说话角色名称	加粗、居中、大写
-对话	角色台词	左右缩进 20%、两端对齐
-转场	场景转换指示，如"切至："	右对齐、斜体、大写
+As you write, the app automatically recognizes every character you introduce and builds a live analytics dashboard:
 
-OneScreenplay：Write professional screenplays in standard Hollywood format. Features intelligent character recognition and statistics to automatically track each role's lines, scenes, and appearances – helping you balance character presence and analyze your script at a glance. Clean interface, industry-standard styling, and zero subscription.📥 Microsoft Store: OneScreenplay（写剧本）
+Lines of dialogue per character — See exactly how much each character speaks
+Scene appearances — Track which characters appear in which scenes and how often
+Overall presence balance — At a glance, understand the distribution of character presence across your entire script
+Why this matters:
+
+A protagonist who vanishes for 40 pages. A supporting character who dominates Act II. A love interest who speaks once and disappears. These are structural problems that are invisible when you're writing scene by scene — but they become immediately obvious when you can see the data.
+
+OneScreenplay gives you that visibility without any extra plugins, exports, or manual tracking. It's built in, it's automatic, and it updates in real time as you write.
+
+📄 A4 Pagination Preview
+The editor renders your script on A4-sized pages with proper margins (2cm top/bottom, 3cm left/right), so what you see is what gets printed. Content automatically flows to new pages as you write, and page numbers are displayed on each page.
+
+🧭 Scene Navigation Sidebar
+A live scene list is generated in the left panel as you write. Click any scene to jump directly to it — essential for longer scripts where scrolling through 80+ pages isn't practical. The sidebar also displays your script title and author name, both editable in place.
+
+📤 Multi-Format Export
+When your script is ready, export it to:
+
+📄 PDF — Print-ready, properly formatted A4 pages via jsPDF
+📝 Word (.doc) — For collaboration with producers and studios who require .doc format
+🌐 HTML — For web sharing, digital reading, or further styling
+💾 Auto-Save & Project Management
+Auto-save at configurable intervals (1, 3, 5, 10, or 15 minutes) — never lose your work
+Project files use the .spm format (JSON-based) — lightweight, human-readable, and easy to back up or version-control
+Full file operations: New, Open, Save, Save As — with keyboard shortcuts for every action
+Unsaved changes warning — the app alerts you before closing with unsaved work
+⌨️ Keyboard Shortcuts
+Shortcut	Action
+Tab	Cycle element type
+Enter	Smart line break (next logical element)
+Ctrl+S	Save
+Ctrl+Shift+S	Save As
+Ctrl+N	New script
+Ctrl+O	Open project
+🏗️ Technical Details
+Platform: Windows (Microsoft Store)
+Availability: 240 countries and regions worldwide
+Interface language: English
+Pricing model: One-time purchase (~$9.40) — no subscription, no in-app purchases
+Built with: Native HTML/CSS/JavaScript, jsPDF for PDF export
+File format: .spm (JSON-based project files)
+Project File Format
+
+JSON
+{
+  "title": "My Screenplay",
+  "author": "Your Name",
+  "content": "<editor HTML content>",
+  "scenes": ["INT. COFFEE SHOP - DAY", "EXT. PARK - EVENING"],
+  "metadata": {
+    "created": "2025-01-01T00:00:00.000Z",
+    "modified": "2025-01-15T12:30:00.000Z",
+    "version": "1.0"
+  }
+}
+🎯 Who Is This For?
+Film students who need Hollywood-standard formatting without the $200 price tag
+Indie screenwriters who want professional output at an indie budget
+Freelance writers who are tired of paying monthly for tools they use intermittently
+Script consultants who need quick character analytics to identify structural issues
+Anyone who believes creative tools should be accessible, not subscription-locked
+💰 Pricing Comparison
+Tool	Price	Model
+OneScreenplay	~$9.40	One-time purchase
+Final Draft	$199+	One-time (major version upgrades paid)
+Celtx	$22.99/mo	Subscription
+WriterDuet	$11.99/mo	Subscription
+Fade In	$79.95	One-time
+OneScreenplay costs less than a single month of most subscription alternatives — and you own it forever.
+
+📥 Get OneScreenplay
+Available now on the Microsoft Store:
+
+🔗 OneScreenplay on Microsoft Store
+
+I'd love to hear your feedback, feature requests, or stories about how OneScreenplay fits into your writing workflow. Drop a comment below or reach out directly.
+
+Happy writing.
