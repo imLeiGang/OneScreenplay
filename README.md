@@ -1,5 +1,5 @@
 写剧本 (OneScreenplay)
-专业中文剧本创作软件，采用标准剧本格式，支持场景、动作、角色、对话、转场五种核心元素，提供智能编辑与多格式导出功能。
+专业剧本创作软件，采用标准剧本格式，支持场景、动作、角色、对话、转场五种核心元素，提供智能编辑与多格式导出功能。
 
 功能特性
 剧本编辑
@@ -52,7 +52,4 @@ Electron 桌面应用
 对话	角色台词	左右缩进 20%、两端对齐
 转场	场景转换指示，如"切至："	右对齐、斜体、大写
 
-OneScreenplay
-Write professional screenplays in standard Hollywood format. Features intelligent character recognition and statistics to automatically track each role's lines, scenes, and appearances – helping you balance character presence and analyze your script at a glance. Clean interface, industry-standard styling, and zero subscription.
-
-📥 Microsoft Store: OneScreenplay
+OneScreenplay：Write professional screenplays in standard Hollywood format. Features intelligent character recognition and statistics to automatically track each role's lines, scenes, and appearances – helping you balance character presence and analyze your script at a glance. Clean interface, industry-standard styling, and zero subscription.📥 Microsoft Store: OneScreenplay（写剧本）
