@@ -36,14 +36,7 @@ Ctrl+S	保存
 Ctrl+Shift+S	另存为
 Ctrl+N	新建剧本
 Ctrl+O	打开工程
-项目结构
 
-Plain Text
-OneScreenplay/
-├── jusuo-advanced.html   # 主页面
-├── jusuo-app.js          # 核心应用逻辑
-├── jusuo-export.js       # 导出功能模块
-└── jusuo-styles.css      # 样式文件
 使用方式
 浏览器直接运行
 用浏览器打开 jusuo-advanced.html 即可使用。浏览器环境下文件操作通过 File System Access API 和 localStorage 实现。
@@ -59,10 +52,7 @@ Electron 桌面应用
 对话	角色台词	左右缩进 20%、两端对齐
 转场	场景转换指示，如"切至："	右对齐、斜体、大写
 
-技术栈
-原生 HTML / CSS / JavaScript
-Font Awesome 图标
-jsPDF PDF 生成
-Electron 兼容（可选）
-工程文件格式
-剧本工程文件使用 .spm 扩展名，本质为 JSON 格式：
+OneScreenplay
+Write professional screenplays in standard Hollywood format. Features intelligent character recognition and statistics to automatically track each role's lines, scenes, and appearances – helping you balance character presence and analyze your script at a glance. Clean interface, industry-standard styling, and zero subscription.
+
+📥 Microsoft Store: OneScreenplay
