@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>写剧本 - 专业中文剧本创作软件</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="jusuo-styles.css">
+</head>
+<body>
+    <!-- 顶部菜单栏 -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="写剧本" class="app-logo">
+            <span>写剧本</span>
+        </div>
+        
+        <!-- Tab切换元素类型提示 -->
+        <div class="element-switch-indicator">
+            <span class="indicator-label">
+                <i class="fas fa-exchange-alt"></i>
+                Tab切换:
+            </span>
+            <div class="element-types">
+                <span class="element-type-item" data-type="scene">场景</span>
+                <span class="element-type-arrow">→</span>
+                <span class="element-type-item" data-type="action">动作</span>
+                <span class="element-type-arrow">→</span>
+                <span class="element-type-item" data-type="character">角色</span>
+                <span class="element-type-arrow">→</span>
+                <span class="element-type-item" data-type="dialogue">对话</span>
+                <span class="element-type-arrow">→</span>
+                <span class="element-type-item" data-type="transition">转场</span>
+            </div>
+        </div>
+        
+        <nav class="menu">
+            <div class="menu-item">
+                <i class="fas fa-file"></i> 文件
+                <div class="dropdown">
+                    <div class="dropdown-item" id="new-script">
+                        <i class="fas fa-file-plus"></i> 新建剧本 (Ctrl+N)
+                    </div>
+                    <div class="dropdown-item" id="open-script">
+                        <i class="fas fa-folder-open"></i> 打开工程 (Ctrl+O)
+                    </div>
+                    <div class="dropdown-item" id="save-script">
+                        <i class="fas fa-save"></i> 保存 (Ctrl+S)
+                    </div>
+                    <div class="dropdown-item" id="save-script-as">
+                        <i class="fas fa-file-export"></i> 另存为 (Ctrl+Shift+S)
+                    </div>
+                    <div class="dropdown-item" id="close-app">
+                        <i class="fas fa-times"></i> 关闭应用
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-download"></i> 导出
+                <div class="dropdown">
+                    <div class="dropdown-item" id="export-pdf">
+                        <i class="fas fa-file-pdf"></i> 导出PDF
+                    </div>
+                    <div class="dropdown-item" id="export-word">
+                        <i class="fas fa-file-word"></i> 导出Word
+                    </div>
+                    <div class="dropdown-item" id="export-html">
+                        <i class="fas fa-file-code"></i> 导出HTML
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" id="settings-menu">
+                <i class="fas fa-cog"></i> 设置
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+        <!-- 左侧导航面板 -->
+        <aside class="sidebar">
+            <div class="script-info">
+                <h3><i class="fas fa-info-circle"></i> 剧本信息</h3>
+                <input type="text" id="script-title" placeholder="剧本名称，如《流浪地球3》" value="无标题剧本">
+                <input type="text" id="script-author" placeholder="作者，如刘慈欣·郭帆" value="">
+            </div>
+            <div class="scene-navigation">
+                <h4><i class="fas fa-list"></i> 场景导航</h4>
+                <div id="scene-list">
+                    <!-- 场景列表将动态生成 -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- 编辑器区域 -->
+        <main class="editor-container">
+            <div class="page-container" id="page-container">
+                <div class="page">
+                    <div class="editor" id="editor" contenteditable="true">
+                        <!-- 编辑器内容 -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 底部状态栏 -->
+    <footer class="status-bar">
+        <div class="status-left">
+            <span>元素: <strong id="element-type">场景</strong></span>
+            <span>字数: <strong id="word-count">0</strong></span>
+            <span>页数: <strong id="page-count">1</strong></span>
+        </div>
+        <div class="status-right">
+            <span id="save-status">已保存</span>
+            <span id="auto-save-status">自动保存: 启用</span>
+        </div>
+    </footer>
+
+    <!-- 设置模态框 -->
+    <div class="modal" id="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-cog"></i> 自动保存设置</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="auto-save-enabled" checked>
+                        <label for="auto-save-enabled">启用自动保存</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="auto-save-interval">自动保存间隔 (分钟)</label>
+                    <select id="auto-save-interval">
+                        <option value="1">1 分钟</option>
+                        <option value="3">3 分钟</option>
+                        <option value="5" selected>5 分钟</option>
+                        <option value="10">10 分钟</option>
+                        <option value="15">15 分钟</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>保存路径: <span id="save-path-display">使用本地存储</span></label>
+                    <input type="file" id="save-path-input" webkitdirectory style="display: none;">
+                    <button class="btn btn-secondary" id="choose-save-path">选择保存目录</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-settings">取消</button>
+                <button class="btn btn-primary" id="save-settings">保存设置</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 通知容器 -->
+    <div class="notification" id="notification"></div>
+
+    <!-- 调试面板 -->
+    <div class="debug-panel" id="debug-panel" style="position: fixed; bottom: 0; right: 0; background: #333; color: white; padding: 10px; font-size: 12px; max-width: 300px; max-height: 200px; overflow: auto; display: none;">
+        <h4>调试信息</h4>
+        <div id="debug-content"></div>
+        <button onclick="document.getElementById('debug-panel').style.display='none'">关闭</button>
+    </div>
+
+    <!-- 快捷键提示 -->
+    <div class="shortcut-hint" id="shortcut-hint">
+        <p><strong>快捷键提示：</strong></p>
+        <p>Tab: 切换元素类型</p>
+        <p>Enter: 智能换行</p>
+        <p>Ctrl+S: 保存</p>
+        <p>Ctrl+N: 新建</p>
+        <p><button onclick="document.getElementById('debug-panel').style.display='block'">显示调试面板</button></p>
+    </div>
+
+    <!-- 隐藏的文件输入 -->
+    <input type="file" id="file-input" accept=".spm,.json" style="display: none;">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="jusuo-app.js"></script>
+    <script src="jusuo-export.js"></script>
+</body>
+</html>
